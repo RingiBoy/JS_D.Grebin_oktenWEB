@@ -249,7 +249,7 @@ for (const user of usersList) {
     for (const key in user) {
              
                 const addres = user[key];
-                if ((typeof(addres))==='object'){
+                if (typeof(addres)==='object'){
                 console.log(addres)
                 document.write('<div class="address-block"">')
                   document.write(` <p> City - ${addres.city} </p>`)  

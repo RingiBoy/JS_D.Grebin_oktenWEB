@@ -3,24 +3,24 @@
 
 
 
-.wrap {
+.users-box {
 display: flex;
-width: 1000px;
+width: auto;
 flex-wrap: wrap;
 justify-content: center;
 align-items:stretch;
 align-content: flex-start;
-column-gap:10px;
-flex-grow:1;
+
+
 
 }
 
-.post-card{
+.user-block{
     background-color: aquamarine;
     padding: 10px;
     margin: 10px;
     width: 20%;
-    flex: 2 ;
+    /* flex: 2 ; */
 }
 
 /* .post-card>p{
