@@ -254,7 +254,7 @@ for (const user of usersList) {
                 if ((typeof(addres)==='object')&& !!(addres.city)){
                 console.log('object::::')
                 console.log(addres)
-                document.write('<div class="address-block"">')
+                document.write('<div class="address-block">')
                   document.write(` <p> City - ${addres.city} </p>`)  
                   document.write(` <p> Street - ${addres.street} </p>`)  
                   document.write(` <p> Zip code - ${addres.zipcode} </p>`)  
