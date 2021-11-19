@@ -242,6 +242,7 @@ for (const user of usersList) {
     document.write('<div class="user-block">')
     
     document.write(`<h2>ID:${user.id} - NAME:${user.name} - USERNAME:${user.username} </h2>`)
+    document.write(`<h3>EMAIL:${user.email} - PHONE:${user.phone} </h3>`)
     
         
     
@@ -266,6 +267,8 @@ for (const user of usersList) {
     document.write('</div>')
 
 
-    document.write(`<h3>EMAIL:${user.email} - PHONE:${user.phone} </h3>`)
-    document.write('</div>')
+    
+    
 }
+
+document.write('</div>')
