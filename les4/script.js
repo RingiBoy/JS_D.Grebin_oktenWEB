@@ -116,20 +116,20 @@ console.log('Hello OktenWEB');
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
-let objS=[{id:1, name:'Dima', age:36}, {id:2, name:'Olya', age:4}, {id:3, name:'Yura', age:6}, {id:4, name:'Serg', age:17}]
+// let objS=[{id:1, name:'Dima', age:36}, {id:2, name:'Olya', age:4}, {id:3, name:'Yura', age:6}, {id:4, name:'Serg', age:17}]
 
-function massObj(params) {
-    for (const obj of params) {
-        document.write('<div>')
-        console.log(obj)
-        for (const key in obj) {
-            const element = obj[key];
-            document.write(`<p>${element}</p>`)
-            }
-        document.write('</div>')
-    }
+// function massObj(params) {
+//     for (const obj of params) {
+//         document.write('<div>')
+//         console.log(obj)
+//         for (const key in obj) {
+//             const element = obj[key];
+//             document.write(`<p>${element}</p>`)
+//             }
+//         document.write('</div>')
+//     }
 
-}
+// }
 
 
-massObj(objS)
+// massObj(objS)
