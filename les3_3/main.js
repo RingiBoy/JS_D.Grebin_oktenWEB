@@ -191,6 +191,30 @@ console.log('hello oktenWEB');
 //     {user_id: 4, country: 'USA', city: 'Miami'}
 // ];
 
+
+// usersWithId[0]['address']={country: 'Ukraine', city: 'Ternopil'}
+// let usersWithCities=[];
+
+// for (const data of usersWithId) {
+
+//     for (const key in citiesWithId) {
+
+//         if((citiesWithId[key]['user_id'])===(data.id)){
+//             i=(data.id)-1
+            
+//               usersWithCities.push(data)
+//                usersWithCities[i]['address']=citiesWithId[key]
+
+
+//         }
+
+//     }
+// }
+
+
+// console.log(usersWithCities)
+
+
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 // Записати цей об'єкт в новий масив
 // Example:
@@ -218,5 +242,43 @@ console.log('hello oktenWEB');
 
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+
+
+// let user =['O','l','y','a',' ','P', 'r', 'i', 'v', 'e','t'];
+// let newName=' ';
+// for (const key in user) {
+//      {
+//         // console.log(user[key])
+//         newName += user[key]
+        
+//     }
+// }
+// console.log(newName)
+
+// let user =['O','l','y','a',' ','P', 'r', 'i', 'v', 'e','t'];
+// let newName=' '
+// for (let i = 0; i < user.length; i++) {
+//     newName+= user[i];
+    
+// }
+// console.log(newName)
+
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+// let i=0;
+// let newName=' '
+// let user =['O','l','y','a',' ','P', 'r', 'i', 'v', 'e','t'];
+// while (i<user.length) {
+//     newName+= user[i];
+//     i++
+// }
+// console.log(newName)
+
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+
+// let user =['O','l','y','a',' ','P', 'r', 'i', 'v', 'e','t'];
+
+//  let newName=' '
+// for (const word of user) {
+//     newName+= word;
+// }
+// console.log(newName)
