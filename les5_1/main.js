@@ -66,12 +66,12 @@ xxx=[];
 res=(arr)=>{
 
     for (let index = 0; index < arr.length; index++) {
-    console.log(arr[index]) 
+   
         if(!!(arr[index])){
         xxx.push(arr[index])
         }
     }
-    console.log(xxx)
+   
     let xxxLenght = xxx.length
     
     let lenght = arr.length-xxx.length;
@@ -84,4 +84,5 @@ res=(arr)=>{
 
  
 array=[0,0,1,0,0,1,0,0,1,0,0,1,0,1,2,3,4,1,2,3,4,1,2,3,4];
+console.log("🚀 ~ file: main.js ~ line 87 ~ array", array)
 console.log(res(array));
