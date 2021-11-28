@@ -68,32 +68,75 @@ console.log('hello oktenWEB!!!');
 
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
-//     let str = 'Каждый охотник желает знать';
+    // let str = 'Каждый охотник желает знать';
+    
+    // function stringToarray(str){
+    //     return str.split(' ')
+        
+    // }
+
+
     // let arr = stringToarray(str);
+    
+    // console.log("🚀 ~ file: hw6.js~ arr", arr)
     // document.writeln(arr); // ['Каждый', 'охотник', 'желает', 'знать']
+    
 
-// let str = 'Каждый охотник желает знать';
-// function stringToarray(str){
-//     return str.split(' ')
-// }
-
-// let arr = stringToarray(str);
-//     document.write(arr);
-//     console.log(arr)
 
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
-//     let str = 'Каждый охотник желает знать';
-//     document.writeln(delete_characters(str, 7)); // Каждый
+    // let str = 'Каждый охотник желает знать';
+
+    // function delete_characters(str, numb){
+    //     return str.slice('',numb)
+    // }
+
+
+
+    // document.writeln(delete_characters(str, 7)); // Каждый
+
+
 
 
 
 
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
 //    let str = "HTML JavaScript PHP";
+
+// let insert_dash=(str)=> {
+//     return str.replaceAll(' ', '-').toUpperCase()
+// }
+// // console.log(insert_dash(str));
 //    document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
 
 // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
+// let str = "hTML JavaScript PHP";
+
+// let oneWordToUp=(str)=>{
+    
+    
+//      let word = str.charAt(0).toUpperCase();
+//      return newStr= str.replaceAll(str.charAt(0), word)
+
+//     //  console.log(word)
+// }
+// console.log(oneWordToUp(str))
 
 
 
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+
+let str = "html javaScript php";
+let capitalize=(str)=>{
+    let arr=str.split(' ')
+    let arr2=[];
+    console.log(arr)
+    for (const iterator of arr) {
+        const word = iterator.charAt(0).toUpperCase();
+        const newStr= iterator.replaceAll(iterator.charAt(0), word)
+        arr2.push(newStr)
+
+    }
+        console.log(arr2.toString().replaceAll(',', ' '))
+}
+
+console.log(capitalize(str))
