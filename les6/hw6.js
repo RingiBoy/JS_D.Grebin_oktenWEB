@@ -140,3 +140,4 @@ let capitalize=(str)=>{
 }
 
 console.log(capitalize(str))
+document.write(capitalize(str))   //? почему андефайн 
