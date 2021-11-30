@@ -56,10 +56,10 @@ class Client{
         this.phone=phone;
         this.order = order;
     }
-        lenght()
-        {
-            return console.log(this.order.length)     //? почему эта функция не отрабатывает? :(
-        }
+        // lenght()
+        // {
+        //     return console.log(this.order.length)     //? почему эта функция не отрабатывает? :(
+        // }
 }
 
 let client1= new Client(2,'Olya','Titova','olya@titova.com','+38063255555',['abb', 'ttt', 'poppr', 'dddd']);
@@ -79,7 +79,7 @@ console.log(clients)
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 
 let sortClass = clients.sort((a,b)=> {
-    length();   
+    // length();   
     // почему не отрабатывает?
     return a.order.length - b.order.length
     
