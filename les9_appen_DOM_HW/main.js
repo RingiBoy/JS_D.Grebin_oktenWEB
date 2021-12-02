@@ -1,8 +1,6 @@
-// Все робити за допомоги js.
-// - створити блок,
+// // Все робити за допомоги js.
+// // - створити блок,
 // let div =document.createElement('div')
-
-
 
 // // - додати йому класи wrap, collapse, alpha, beta
 // div.classList.add('wrap')
@@ -24,33 +22,28 @@
 // divClone.innerText=`Clone:${div.innerText}`
 // document.body.appendChild(divClone)
 
-
+// ==================================================================
 
 // - Є масив:
-let arr= ['Main','Products','About us','Contacts']
-// Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
-// Завдання робити через цикли.
-let menuClass = document.getElementsByClassName('menu')[0];
-console.log(menuClass);
-
-let liAdd = document.createElement('li')
+// let arr= ['Main','Products','About us','Contacts']
+// // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
+// // Завдання робити через цикли.
+// let menuClass = document.getElementsByClassName('menu')[0];
 
 
-i=0;
-while (i<3) {
-    menuClass.appendChild(liAdd);
-    i++;
-}
-
-  
-
-    //  menuClass[0].appendChild(liAdd.innerText=`${arr[i]}`);
-    
-    
+// let liAdd = document.createElement('li');
 
 
+// i=0;
+// while (i<arr.length) {
+// liAdd.innerText=`${arr[i]}`
+// menuClass.appendChild(liAdd.cloneNode(true))
 
-// - Є масив
+//     i++;
+// }
+
+ 
+// // - Є масив:
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
 //     {title: 'Java Complex', monthDuration: 6},
@@ -59,10 +52,24 @@ while (i<3) {
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-// Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
-// Завдання робити через цикли.
 
-// - Є масив
+// // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
+// // Завдання робити через цикли.
+
+
+// let menuClass = document.getElementsByClassName('menu')[0];
+
+
+// for (const objs of coursesAndDurationArray) {
+//         const liAdd = document.createElement('li');
+//         liAdd.innerText=`title:${objs.title} | monthDuration:${objs.monthDuration}`
+//         menuClass.appendChild(liAdd)
+// }
+
+
+
+
+// //- Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
 //     {title: 'Java Complex', monthDuration: 6},
@@ -71,5 +78,27 @@ while (i<3) {
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-// За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
-// Завдання робити через цикли.
+// // // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
+// // // Завдання робити через цикли.
+
+// let menuClass = document.getElementsByClassName('menu')[0];
+
+
+// for (const objs of coursesAndDurationArray) {
+//         const liAdd = document.createElement('li');
+//         const divAdd = document.createElement('div');
+        
+//         divAdd.setAttribute('class','item' )
+//         const h1Add = document.createElement('h1');
+//         h1Add.setAttribute('class', 'heading');
+//         const pAdd = document.createElement('p');
+//         pAdd.setAttribute('class', 'description');
+//         // liAdd.innerText=` | monthDuration:${objs.monthDuration}`
+//         menuClass.appendChild(liAdd)
+//         liAdd.appendChild(divAdd)
+//         h1Add.innerText=`title:${objs.title}`
+//         pAdd.innerText=`monthDuration:${objs.monthDuration}`
+//         divAdd.appendChild(h1Add)
+//         divAdd.appendChild(pAdd)
+
+// }
