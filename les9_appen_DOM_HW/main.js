@@ -1,48 +1,35 @@
-console.log('hello OktenWEB');
+// Все робити за допомоги js.
+// - створити блок,
+// - додати йому класи wrap, collapse, alpha, beta
+// - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
+// - додати цей блок в body.
+// - клонувати його повністю, та додати клон в body.
 
+// - Є масив:
+// ['Main','Products','About us','Contacts']
+// Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
+// Завдання робити через цикли.
 
-// - Напишіть код,  котрий :
-//     -- отримує текст з параграфа з id "content"
+// - Є масив
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
+// Завдання робити через цикли.
 
-let contentId= document.getElementById('content');
-console.log(contentId);
-
-//     -- отримує текст з блоку з id "rules"
-let rulesId = document.getElementById('rules');
-console.log(rulesId);
-
-//     -- замініть текст параграфа з id 'content' на будь-який інший
-contentId.innerText='javascript - Обращение к элементу по id - Stack OverflowSearch domain ru.stackoverflow'
-
-//     -- замініть текст параграфа з id 'rules' на будь-який інший
-rulesId.innerText='"Если элементу назначен специальный атрибут id, то можно получить его прямо по переменной с именем из значения id. Это поведение соответствует стандарту . Оно существует, в первую очередь, для совместимости, как осколок далёкого прошлого и не очень приветствуется, поскольку использует глобальные переменные. Браузер пытается помочь нам, смешивая пространства имён JS и DOM, но при этом возможны конфликты. Более правильной и общепринятой практикой является доступ к элементу вызовом document.getElementById("идентификатор")"'
-
-//     -- змініть кожному елементу колір фону на червоний
-//     -- змініть кожному елементу колір тексту на синій
-contentId.style.color ='blue';
-rulesId.style.background='red';
-
-
-
-// console.log(rulesId.classList);
-
-//     -- отримати весь список класів елемента з id=rules і вивести їх в console.log
-// 1 
-console.log(rulesId.classList);
-
-// 2
-let classAllByIdRules = (rulesId)=>{
-    for (const iter of rulesId.classList){
-        
-        console.log(iter);
-    }
-}
-classAllByIdRules(rulesId)
-
-//     -- поміняти колір тексту у всіх елементів fc_rules на червоний
-let elementFcRules = document.getElementsByClassName('fc_rules')
-// console.log(elementLi);
-for (const element of elementFcRules) {
-    element.style.background ='yellow';
-    
-}
+// - Є масив
+// let coursesAndDurationArray = [
+//     {title: 'JavaScript Complex', monthDuration: 5},
+//     {title: 'Java Complex', monthDuration: 6},
+//     {title: 'Python Complex', monthDuration: 6},
+//     {title: 'QA Complex', monthDuration: 4},
+//     {title: 'FullStack', monthDuration: 7},
+//     {title: 'Frontend', monthDuration: 4}
+// ];
+// За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
+// Завдання робити через цикли.
