@@ -1,14 +1,54 @@
 // Все робити за допомоги js.
 // - створити блок,
-// - додати йому класи wrap, collapse, alpha, beta
-// - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
-// - додати цей блок в body.
-// - клонувати його повністю, та додати клон в body.
+// let div =document.createElement('div')
+
+
+
+// // - додати йому класи wrap, collapse, alpha, beta
+// div.classList.add('wrap')
+// div.classList.add('collapse')
+// div.classList.add('alpha')
+// div.classList.add('beta')
+// // - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
+// div.style.background= 'yellow';
+// div.style.color= 'blue';
+// div.style.fontSize= '14px';
+// div.style.fontFamily=  'Arial, Helvetica, sans-serif';
+// div.innerText='Hello OktenWEB'
+
+// // - додати цей блок в body.
+// document.body.appendChild(div)
+// // - клонувати його повністю, та додати клон в body.
+
+// let divClone = div.cloneNode(true)
+// divClone.innerText=`Clone:${div.innerText}`
+// document.body.appendChild(divClone)
+
+
 
 // - Є масив:
-// ['Main','Products','About us','Contacts']
+let arr= ['Main','Products','About us','Contacts']
 // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
 // Завдання робити через цикли.
+let menuClass = document.getElementsByClassName('menu')[0];
+console.log(menuClass);
+
+let liAdd = document.createElement('li')
+
+
+i=0;
+while (i<3) {
+    menuClass.appendChild(liAdd);
+    i++;
+}
+
+  
+
+    //  menuClass[0].appendChild(liAdd.innerText=`${arr[i]}`);
+    
+    
+
+
 
 // - Є масив
 // let coursesAndDurationArray = [
