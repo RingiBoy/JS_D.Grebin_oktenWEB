@@ -246,41 +246,78 @@ for (const objt of usersList) {
     
     
     let blok = document.createElement('div');
-    blok.setAttribute('class', 'blok')
-    
-    let idAdd = document.createElement('p')
-    let nameAdd = document.createElement('p')
-    let username=document.createElement('p')
-    let email = document.createElement('p')
-    //addressBOX:
+    blok.setAttribute('class', 'blok');
+    //let start key
+    let idAdd = document.createElement('p');
+    let nameAdd = document.createElement('p');
+    let username=document.createElement('p');
+    let email = document.createElement('p');
     let address = document.createElement('div');
-     
-     
-    for (const key in objt) {
-        if (key == 'address'){   
-        
+    let phone = document.createElement('p');
+    let website=document.createElement('p');
+    let company=document.createElement('div');
 
-
-
-            
-        }
-    }
-        
-
-
-    idAdd.innerText = `ID: ${objt.id}`
-    nameAdd.innerText = `NAME: ${objt.name}`
-    username.innerText = `USERNAME: ${objt.username}`
-    email.innerText = `EMAIL: ${objt.email}`
+    // let address Date:
+    let street = document.createElement('p');
+    let suite = document.createElement('p');
+    let city = document.createElement('p');
+    let zipcode = document.createElement('p');
+    let geo = document.createElement('div');
+    let lat= document.createElement('p');
+    let lng= document.createElement('p');  
     
+    //let company Date:
+    let nameCompany=document.createElement('p');
+    let catchPhrase = document.createElement('p');
+    let  bs = document.createElement('p');
+
+    //innerText allDate:
+    idAdd.innerText = `ID:   ${objt.id}`;
+    nameAdd.innerText = `NAME:   ${objt.name}`;
+    username.innerText = `USERNAME:   ${objt.username}`;
+    email.innerText = `EMAIL:   ${objt.email}`;
+    address.innerText='ADDRESS: ';
+    street.innerText=`STREET:   ${objt.address.street}`;
+    suite.innerText=`SUITE:   ${objt.address.suite}`;
+    city.innerText=`CITY:   ${objt.address.city}`;
+    zipcode.innerText=`ZIPCODE:   ${objt.address.zipcode}`;
+    geo.innerText='GEO:  ';
+    lat.innerText= `LAT:   ${objt.address.geo.lat}`;
+    lng.innerText= `LNG:   ${objt.address.geo.lng}`;
+    phone.innerText=`PHONE:  ${objt.phone}`;
+    website.innerText=`SITE:  www.${objt.website}`;
+    company.innerText='COMPANY:  ';
+    nameCompany.innerText=`NAME:  ${objt.company.name}`;
+    catchPhrase.innerText=`PHRASE:  ${objt.company.catchPhrase}`;
+    bs.innerText=`BS:  ${objt.company.bs}`;
+
+
     
-    //append
+    //append wrap:
     wrap.appendChild(blok);
-
+    //append block:
     blok.appendChild(idAdd);
     blok.appendChild(nameAdd);
     blok.appendChild(username);
     blok.appendChild(email);
+    blok.appendChild(address);
+    blok.appendChild(phone);
+    blok.appendChild(website);
+    blok.appendChild(company);
+
+    //append address:
+    address.appendChild(street);
+    address.appendChild(suite);
+    address.appendChild(city);
+    address.appendChild(zipcode);
+    address.appendChild(geo);
+    //append geo:
+    geo.appendChild(lat);
+    geo.appendChild(lng);
+    //append company:
+    company.append(nameCompany,catchPhrase,bs)
+
+    
 
 }
 
