@@ -317,32 +317,7 @@ for (const objt of usersList) {
     //append company:
     company.append(nameCompany,catchPhrase,bs)
 
-    
-
 }
-
-
-
-
-// for (const objs of coursesAndDurationArray) {
-//         const liAdd = document.createElement('li');
-//         const divAdd = document.createElement('div');
-        
-//         divAdd.setAttribute('class','item' )
-//         const h1Add = document.createElement('h1');
-//         h1Add.setAttribute('class', 'heading');
-//         const pAdd = document.createElement('p');
-//         pAdd.setAttribute('class', 'description');
-//         // liAdd.innerText=` | monthDuration:${objs.monthDuration}`
-//         menuClass.appendChild(liAdd)
-//         liAdd.appendChild(divAdd)
-//         h1Add.innerText=`title:${objs.title}`
-//         pAdd.innerText=`monthDuration:${objs.monthDuration}`
-//         divAdd.appendChild(h1Add)
-//         divAdd.appendChild(pAdd)
-
-// }
-
 
 
 
