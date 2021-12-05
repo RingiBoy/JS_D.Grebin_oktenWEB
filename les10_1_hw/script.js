@@ -94,6 +94,7 @@ for (const comment of comments) {
     box.append(titleAdd,bodyAdd,butt);
     butt.onclick=function(){                        //каким образом этот клик знает,что конктерно к этому ббоди нужно применить тогл,  ведь цикл создал кнопку и на том все???????????????????????????
         bodyAdd.classList.toggle('displNone')
+        console.log(butt)
     }
 
     
