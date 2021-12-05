@@ -76,17 +76,38 @@ btn3.onclick=function(){
 inputText =document.getElementById('inputText').value;
     
     for (const word of badWords) {
-        if (inputText == word){ 
-         return console.log( 'Ахтунг Ахтунг')   
+        if (inputText.toUpperCase() == word.toUpperCase()){ 
+         return console.log( 'Плохие слова найдены');  
         }
 
-        else return console.log('Плохиг слов нет');
+        
         
     }
+    return  console.log('Плохих слов нет');
+    
 }
 
-// - Сворити масив нецензцрних слів.
+// - Сворити масив нецензурних слів.
 // Сворити інпут текстового типу.
 // Потрібно перевіряти чи не містить ціле речення в собі погані слова.
 // Кинути алерт з попередженням у випадку якщо містить.
 // Перевірку робити при натисканні на кнопку
+
+
+let btn4 = document.getElementById('btn4');
+let inputText2 ='';
+btn4.onclick=function(){
+inputText2 =document.getElementById('inputText2').value;
+    InputWords= inputText2.split(' ');
+    for (let i = 0; i < InputWords.length; i++) {
+        for (let k = 0; k < badWords.length; k++) {
+            if (InputWords[i].toUpperCase()==badWords[k].toUpperCase()){
+                return console.log('Плохие слова найдены');
+            }
+            
+        }
+        
+    }
+    return  console.log('Плохих слов нет');
+    
+}
