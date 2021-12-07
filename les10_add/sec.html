@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nameClassDivSec div" style="border: 1px solid #333333; width: 200px; height: 250px;">
+    smth test div   sec page
+    
+    <p class="namePClassSec" id="1">smth text teg "p"</p>
+    
+    </div>
+    
+    <script>
+
+
+
+document.onclick =function(e){
+    console.log('class list:', e.target.classList)
+    console.log('id:', e.target.id)
+    console.log('teg: ', e.target.localName)
+    console.log(e)
+    console.log('Высота блока:' , e.target.scrollHeight)
+    console.log('Ширина блока:' , e.target.scrollWidth)
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+#wrap{
+   width: 500px; 
+   height: 500px;
+}
+#users{
+    width: 500px; 
+    height: 500px;
+}
+
+#inputCheckBox{
+    display: flex;
+    flex-direction:column;
+
+}
