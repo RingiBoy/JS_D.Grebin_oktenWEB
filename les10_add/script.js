@@ -58,7 +58,7 @@ checkBoxFalseStatus.onclick = function(){
     }
     else if ((this.checked)&&(checkBoxOld29.checked)){
         let falseFiltr = (usersWithAddress.filter(user=>user.status));
-        let ages = (falseFiltr.filter(user=>user.age>=29))
+        let ages = falseFiltr.filter(user=>user.age>=29)
             console.log('agessss:', ages)
     }
 
@@ -77,10 +77,9 @@ checkBoxOld29.onclick=function(){
 
 checkBoxWhithKiev.onclick = function(){
     if(this.checked){
-        this.address.city
-        console.log('this.address.city:', this.address.city)
-        // let onlyKiev = usersWithAddress.filter(item=item.address.city == 'Kyiv')
-        // console.log('onlyKiev:', onlyKiev)
+        
+        let onlyKiev = usersWithAddress.filter(item=>item.address.city == 'Kyiv')
+        console.log('onlyKiev:', onlyKiev)
 
     }
 }
