@@ -29,7 +29,7 @@ let usersWithAddress = [
                 {id:6,name: 'anya', age: 31, status: false, address: {city: 'Kyiv', street: 'Shevchenko', number: 2}},
                 {id:7,name: 'oleg', age: 28, status: false, address: {city: 'Ternopil', street: 'Shevchenko', number: 22}},
                 {id:8,name: 'andrey', age: 29, status: true, address: {city: 'Lviv', street: 'Shevchenko', number: 43}},
-                {id:9,name: 'masha', age: 30, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
+                {id:9,name: 'masha', age: 18, status: true, address: {city: 'Kyiv', street: 'Shevchenko', number: 12}},
                 {id:10,name: 'olya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
                 {id:11,name: 'max', age: 31, status: true, address: {city: 'Ternopil', street: 'Shevchenko', number: 121}}
             ];
@@ -45,12 +45,46 @@ let checkBoxFalseStatus = document.getElementById('check1');
 let checkBoxOld29 = document.getElementById('check2');
 let checkBoxWhithKiev = document.getElementById('check3');
 
+let newUser=[];
 
 
 
-checkBoxFalseStatus.status.onclick = function(){
-    console.log('click');
+checkBoxFalseStatus.onclick = function(){
+    if (this.checked){
+        // console.log('this.checked:', this.checked)
+        let falseFiltr = usersWithAddress.filter(user=>user.status)
+        newUser = falseFiltr
+        console.log('newUser:', newUser)
+    }
+    else if ((this.checked)&&(checkBoxOld29.checked)){
+        let falseFiltr = (usersWithAddress.filter(user=>user.status));
+        let ages = (falseFiltr.filter(user=>user.age>=29))
+            console.log('agessss:', ages)
+    }
+
+
 }
+
+
+checkBoxOld29.onclick=function(){
+    if(this.checked){
+        let age29= usersWithAddress.filter(user=>user.age>=29)
+        console.log('age29xxx:', age29)
+        
+    }
+}
+
+
+checkBoxWhithKiev.onclick = function(){
+    if(this.checked){
+        this.address.city
+        console.log('this.address.city:', this.address.city)
+        // let onlyKiev = usersWithAddress.filter(item=item.address.city == 'Kyiv')
+        // console.log('onlyKiev:', onlyKiev)
+
+    }
+}
+
 
 
 
