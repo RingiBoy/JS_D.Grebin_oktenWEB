@@ -1,10 +1,28 @@
 #wrap{
    width: 500px; 
-   height: 500px;
+   flex-wrap:  wrap;
+   /* height: 500px; */
+   
 }
-#users{
-    width: 500px; 
-    height: 500px;
+#box{
+    /* width: 500px;  */
+    height: auto;
+    display: flex;
+    padding: 5px;
+    border:1px solid;
+    flex-direction:column;
+    
+    justify-content:space-between;
+    align-content:space-around;
+    align-items:stretch;
+    gap: 10px;
+
+}
+.userBox{
+    border:1px dotted blue;
+    width:200px;
+    
+
 }
 
 #inputCheckBox{
