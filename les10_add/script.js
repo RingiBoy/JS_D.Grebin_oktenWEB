@@ -42,99 +42,77 @@ let usersWithAddress = [
 
 //Инициализация:
 let checkBoxFalseStatus = document.getElementById('check1');
+
 let checkBoxOld29 = document.getElementById('check2');
 let checkBoxWhithKiev = document.getElementById('check3');
 let box = document.getElementById('box')
-let arr = [];
+//
 
 
 
 
 let frm = document.forms.f1
 frm.onsubmit = function(e){    
-    e.preventDefault();             //отключение Экшина при нажатии сабмита
-    
-    if (checkBoxFalseStatus.checked){
-        usersWithAddress= usersWithAddress.filter(user=>user.status);
-    }
-    
-    
-   
-    
-    if (checkBoxOld29.checked){
-       
-        usersWithAddress = usersWithAddress.filter(user=>user.age>=29)
-    }
-    
-    if(checkBoxWhithKiev.checked){
-        usersWithAddress = usersWithAddress.filter(user=>user.address.city === 'Kiev')
-    }
-    
-                      //первый чекбокс нажат
-            
-            // let falseFiltr = usersWithAddress.filter(user=>user.status === status && user.age>=age29 && user.address.city === city)
-          
-            console.log('usersWithAddress:', usersWithAddress)
-        
-
-            for (const iterator of usersWithAddress) {            //выводим инфо с объектов
-                let div = document.createElement('div');
-                let h4= document.createElement('H4');
-                let nameP = document.createElement('p');
-                let ageP = document.createElement('p');
-                let cityP = document.createElement('p');
-                div.setAttribute('class', 'userBox');
-                h4.innerText =`id: ${iterator.id}`;
-                nameP.innerText = `name: ${iterator.name}`;
-                ageP.innerText = `name: ${iterator.age}`;
-                cityP.innerText = `city: ${iterator.address.city}`;
-                box.appendChild(div);
-                div.append(h4,nameP,ageP,cityP);
-                console.log(iterator.address.city);
+    e.preventDefault(); //отключение Экшина при нажатии сабмита
                 
-            
-        
-          
-
-
-
-
-
-}
-
-//
-
-
-
-
-    // else if ((checkBoxFalseStatus.checked)&&(checkBoxOld29.checked)){
-    //     let falseFiltr = (usersWithAddress.filter(user=>user.status));
-    //     let ages = falseFiltr.filter(user=>user.age>=29)
-    //         console.log('agessss:', ages)
-    // }
     
-
-
-}
-
-
-// checkBoxOld29.onclick=function(){
-//     if(this.checked){
-//         let age29= usersWithAddress.filter(user=>user.age>=29)
-//         console.log('age29xxx:', age29)
+    if ((checkBoxFalseStatus.checked)&&!(checkBoxOld29.checked)&&!(checkBoxWhithKiev.checked)){
+        usersWithAddress= usersWithAddress.filter(user=>user.status==false);
+        console.log('1');
+    }
+    
+    else if ((checkBoxFalseStatus.checked)&&(checkBoxOld29.checked)&&!(checkBoxWhithKiev.checked)){
+        usersWithAddress = usersWithAddress.filter(user=>user.status==false).filter(user=>user.age>=29);
         
-//     }
-// }
-
-
-// checkBoxWhithKiev.onclick = function(){
-//     if(this.checked){
+        console.log('1, 2');
+    }
+    else if ((checkBoxFalseStatus.checked)&&(checkBoxOld29.checked)&&(checkBoxWhithKiev.checked)){
+        usersWithAddress = usersWithAddress.filter(user=>user.status==false).filter(user=>user.age>=29).filter(user=>user.address.city == 'Kyiv');
         
-//         let onlyKiev = usersWithAddress.filter(item=>item.address.city == 'Kyiv')
-//         console.log('onlyKiev:', onlyKiev)
+        console.log('1,2,3');
+    }
+    else if (!(checkBoxFalseStatus.checked)&&(checkBoxOld29.checked)&&!(checkBoxWhithKiev.checked)){
+        usersWithAddress = usersWithAddress.filter(user=>user.age>=29);
+        
+        console.log('2');
+    }
+    else if (!(checkBoxFalseStatus.checked)&&!(checkBoxOld29.checked)&&(checkBoxWhithKiev.checked)){
+        usersWithAddress = usersWithAddress.filter(user=>user.address.city == 'Kyiv');
+        
+        console.log('3');
+    }
+    else if ((checkBoxFalseStatus.checked)&&!(checkBoxOld29.checked)&&(checkBoxWhithKiev.checked)){
+        usersWithAddress = usersWithAddress.filter(user=>user.status==false).filter(user=>user.address.city == 'Kyiv');
+        
+        console.log('1 ,3');
+    }
+    else if (!(checkBoxFalseStatus.checked)&&(checkBoxOld29.checked)&&(checkBoxWhithKiev.checked)){
+        usersWithAddress = usersWithAddress.filter(user=>user.age>=29).filter(user=>user.address.city == 'Kyiv');
+        
+        console.log('2 ,3');
+    }
+    else usersWithAddress;
+     
+    console.log('usersWithAddress:', usersWithAddress)
+    for (const iterator of usersWithAddress) {            //выводим инфо с объектов
+                        let div = document.createElement('div');
+                        let h4= document.createElement('H4');
+                        let nameP = document.createElement('p');
+                        let ageP = document.createElement('p');
+                        let cityP = document.createElement('p');
+                        div.setAttribute('class', 'userBox');
+                        h4.innerText =`id: ${iterator.id}`;
+                        nameP.innerText = `name: ${iterator.name}`;
+                        ageP.innerText = `name: ${iterator.age}`;
+                        cityP.innerText = `city: ${iterator.address.city}`;
+                        box.appendChild(div);
+                        div.append(h4,nameP,ageP,cityP);
+                        
+                    }
+}           
 
-//     }
-// }
+
+
 
 
 
