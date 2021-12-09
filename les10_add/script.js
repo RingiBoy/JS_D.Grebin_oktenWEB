@@ -45,34 +45,69 @@ let checkBoxFalseStatus = document.getElementById('check1');
 let checkBoxOld29 = document.getElementById('check2');
 let checkBoxWhithKiev = document.getElementById('check3');
 let box = document.getElementById('box')
+let arr = [];
 
 
 
 
-checkBoxFalseStatus.onclick = function(){
-    if (this.checked){
-        // console.log('this.checked:', this.checked)
-        let falseFiltr = usersWithAddress.filter(user=>user.status)
-        newUser = falseFiltr
-        console.log('newUser:', newUser)
-        for (const iterator of falseFiltr) {
-            let div = document.createElement('div');
-            let h4= document.createElement('H4');
-            let p = document.createElement('p');
-            let ageP = document.createElement('p');
-            let cityP = document.createElement('p');
-            div.setAttribute('class', 'userBox');
-            h4.innerText =`id: ${iterator.id}`;
-            p.innerText = `name: ${iterator.name}`;
-            ageP.innerText = `name: ${iterator.age}`;
-            cityP.innerHTML = `city: ${iterator.address.city}`
-            box.appendChild(div);
-            div.append(h4,p,ageP.cityP)
-            console.log(iterator.address.city);
-            
-        }
+let frm = document.forms.f1
+frm.onsubmit = function(e){    
+    e.preventDefault();             //отключение Экшина при нажатии сабмита
+    
+    if (checkBoxFalseStatus.checked){
+        usersWithAddress= usersWithAddress.filter(user=>user.status);
     }
-    // else if ((this.checked)&&(checkBoxOld29.checked)){
+    
+    
+   
+    
+    if (checkBoxOld29.checked){
+       
+        usersWithAddress = usersWithAddress.filter(user=>user.age>=29)
+    }
+    
+    if(checkBoxWhithKiev.checked){
+        usersWithAddress = usersWithAddress.filter(user=>user.address.city === 'Kiev')
+    }
+    
+                      //первый чекбокс нажат
+            
+            // let falseFiltr = usersWithAddress.filter(user=>user.status === status && user.age>=age29 && user.address.city === city)
+          
+            console.log('usersWithAddress:', usersWithAddress)
+        
+
+            for (const iterator of usersWithAddress) {            //выводим инфо с объектов
+                let div = document.createElement('div');
+                let h4= document.createElement('H4');
+                let nameP = document.createElement('p');
+                let ageP = document.createElement('p');
+                let cityP = document.createElement('p');
+                div.setAttribute('class', 'userBox');
+                h4.innerText =`id: ${iterator.id}`;
+                nameP.innerText = `name: ${iterator.name}`;
+                ageP.innerText = `name: ${iterator.age}`;
+                cityP.innerText = `city: ${iterator.address.city}`;
+                box.appendChild(div);
+                div.append(h4,nameP,ageP,cityP);
+                console.log(iterator.address.city);
+                
+            
+        
+          
+
+
+
+
+
+}
+
+//
+
+
+
+
+    // else if ((checkBoxFalseStatus.checked)&&(checkBoxOld29.checked)){
     //     let falseFiltr = (usersWithAddress.filter(user=>user.status));
     //     let ages = falseFiltr.filter(user=>user.age>=29)
     //         console.log('agessss:', ages)
@@ -83,23 +118,23 @@ checkBoxFalseStatus.onclick = function(){
 }
 
 
-checkBoxOld29.onclick=function(){
-    if(this.checked){
-        let age29= usersWithAddress.filter(user=>user.age>=29)
-        console.log('age29xxx:', age29)
+// checkBoxOld29.onclick=function(){
+//     if(this.checked){
+//         let age29= usersWithAddress.filter(user=>user.age>=29)
+//         console.log('age29xxx:', age29)
         
-    }
-}
+//     }
+// }
 
 
-checkBoxWhithKiev.onclick = function(){
-    if(this.checked){
+// checkBoxWhithKiev.onclick = function(){
+//     if(this.checked){
         
-        let onlyKiev = usersWithAddress.filter(item=>item.address.city == 'Kyiv')
-        console.log('onlyKiev:', onlyKiev)
+//         let onlyKiev = usersWithAddress.filter(item=>item.address.city == 'Kyiv')
+//         console.log('onlyKiev:', onlyKiev)
 
-    }
-}
+//     }
+// }
 
 
 
