@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+  }
+
+#wrap{
+    background-color: burlywood;
+}
+
+
+#post{
+    background-color: skyblue;
+    font-size: 11px;
+    padding: 10px;
+    border: 2px tomato dashed ;
+   
+    margin: 10px;
+    /* box-sizing: content-box; */
+}
+
+.commWrap{
+    background-color:teal;
+    font-size: 11px;
+    padding: 10px;
+    border: 2px darkblue double ;
+   
+    margin: 10px;
+}
+.commWrap h5{
+    color: rgb(0, 0, 0);
+}
