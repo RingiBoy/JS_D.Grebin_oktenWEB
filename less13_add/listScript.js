@@ -45,16 +45,22 @@ console.log(techStack);
         quantity.setAttribute('class','list-group-item');
         let button = document.createElement('button');
         button.setAttribute('class',"btn btn-danger");
+        button.setAttribute('id', 'btnId');
         
         nameItem.innerText=itemCard.nameItem;
         price.innerText=`price: ${itemCard.price}`;
         quantity.innerText=`quantity: ${itemCard.quantity}`;
         button.innerText= 'Delete';
+        button.onclick = function(e){
+            console.log(e);
+        }
 
 
 wrap.appendChild(mainBox);
 mainBox.append(img,nameItem,groupUl);
 groupUl.append(price,quantity,button)
+
+        
 
        
 
