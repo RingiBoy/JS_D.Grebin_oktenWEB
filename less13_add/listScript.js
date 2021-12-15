@@ -6,8 +6,9 @@
 
 
 let wrap = document.createElement('div');
-wrap.innerText='КОРЗИНА'
+// wrap.innerText='КОРЗИНА'
 document.body.appendChild(wrap);
+wrap.setAttribute('class','wrap')
 
 
 
