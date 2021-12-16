@@ -13,7 +13,9 @@
 
 let f1 = document.forms.f1;
 console.log(f1);
-
+function random() {
+    return Math.floor(Math.random()*(100000000000-987654321)+1);
+   };
 
 let arr=[];
 f1.onsubmit = function(e){
@@ -22,7 +24,14 @@ f1.onsubmit = function(e){
     const quantity = f1.elements.quantity.value;
     const price =f1.elements.price.value;
     const img = f1.elements.img.value;
-    arr.push({nameItem, quantity, price, img});
+    const idCard = random();
+    
+    
+    
+   
+    
+    console.log(idCard)
+    arr.push({nameItem, quantity, price, img, idCard});
     console.log(arr);
     localStorage.setItem('arr', JSON.stringify(arr));
     
