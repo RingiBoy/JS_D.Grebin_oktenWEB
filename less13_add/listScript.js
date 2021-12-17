@@ -14,13 +14,13 @@ wrap.setAttribute('class','wrap')
 
 
 let techStack = localStorage.getItem("arr");
-console.log(techStack);
+let arrLocalStorege=JSON.parse(techStack);
 
 
 (function () {
-    for (const itemCard of JSON.parse(techStack)) {
+    for (const itemCard of arrLocalStorege) {
         
-        console.log(itemCard)
+        // console.log(itemCard)
         
         //card box:
         let mainBox = document.createElement('div');
@@ -51,22 +51,25 @@ console.log(techStack);
         price.innerText=`price: ${itemCard.price}`;
         quantity.innerText=`quantity: ${itemCard.quantity}`;
         button.innerText= 'Delete';
-        button.onclick = function(e){
-            console.log(e);
+        button.onclick = function(){
+            newArray(itemCard.idCard,  arrLocalStorege);
+          
+            
         }
 
 
 wrap.appendChild(mainBox);
 mainBox.append(img,nameItem,groupUl);
 groupUl.append(price,quantity,button)
-
-        
-
-       
-
-
-
-
-    }
+}
     
 }());
+
+
+function newArray(id,oldArr){
+    let newArr= oldArr.filter(value =>value.idCard!==id);
+    
+    localStorage.setItem('arr', JSON.stringify(newArr));
+    location.reload()
+
+}
