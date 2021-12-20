@@ -1,0 +1,12 @@
+#wrap{
+    display: flex;
+    flex-direction:wrap;  
+flex-wrap: wrap;
+justify-content: space-around;
+   gap:10px;
+}
+
+.card{
+    padding: 5px;
+    margin: 5px;
+}

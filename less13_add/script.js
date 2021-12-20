@@ -34,6 +34,4 @@ f1.onsubmit = function(e){
     arr.push({nameItem, quantity, price, img, idCard});
     console.log(arr);
     localStorage.setItem('arr', JSON.stringify(arr));
-    
-
 }
