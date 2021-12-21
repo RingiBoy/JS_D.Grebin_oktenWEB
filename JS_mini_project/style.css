@@ -1,12 +1,19 @@
 #wrap{
     display: flex;
-    flex-direction:wrap;  
+    /* flex-direction:row;   */
 flex-wrap: wrap;
 justify-content: space-around;
    gap:10px;
+   width: 1200 px;
 }
 
 .card{
     padding: 5px;
     margin: 5px;
+}
+.list-group-item-dark{
+    width: 500px;
+}
+.list-group{
+    border-style: dashed;
 }
