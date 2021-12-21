@@ -10,7 +10,7 @@ div1.classList.add('top');
 let div2 = document.createElement('div');    
 div2.classList.add('bottom');
 
-
+                
 let postDetailsDiv = document.createElement('div');        
  postDetailsDiv.classList.add('card');
 let idPost = document.createElement('p');
