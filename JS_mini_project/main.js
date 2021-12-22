@@ -5,7 +5,7 @@
 
 let arr=[];
 let wrap = document.createElement('div');
-wrap.setAttribute('id','wrap');
+wrap.setAttribute('id','users');
 // wrap.innerText='UsersBox:';
 document.body.appendChild(wrap);
 fetch('https://jsonplaceholder.typicode.com/users')
