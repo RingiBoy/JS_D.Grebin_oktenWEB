@@ -1,10 +1,10 @@
 #wrap{
     display: flex;
-    /* flex-direction:row;   */
+   
 flex-wrap: wrap;
-justify-content: space-around;
+
    gap:10px;
-   width: 1200 px;
+   width: 1200px;
 }
 
 .card{
@@ -17,8 +17,7 @@ justify-content: space-around;
 .list-group{
     border-style: dashed;
     width: 265px;
-    /* align-items: stretch;
-    align-content:stretch */
+    
     
 } 
 
