@@ -17,8 +17,12 @@ justify-content: space-around;
 .list-group{
     border-style: dashed;
     width: 265px;
+    /* align-items: stretch;
+    align-content:stretch */
     
-}
+} 
+
+
 #users{
     display: flex;
     flex-basis: auto auto;
@@ -32,4 +36,7 @@ justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
     width: 1100px;
+}
+.top{
+    width: 1068px;
 }
